@@ -14,9 +14,13 @@ namespace IAF.Data
     {
         [Key]
         public int  EstateId { get; set; }
+        [Required]
         public string Name { get; set; }
+        [Required]
         public Status Status { get; set; }
+        [Required]
         public decimal Price { get; set; }
+        [Required]
         public string Address { get; set; }
 
         [ForeignKey("KingdomId")] //for annotation purposes

@@ -94,5 +94,15 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IAF.Data\IAF.Data.csproj">
+      <Project>{D9F8D4D9-01AB-485F-9C83-021614A7F214}</Project>
+      <Name>IAF.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IAF.Model\IAF.Model.csproj">
+      <Project>{C8521D69-39A8-4857-8B24-6A6C6D5F9563}</Project>
+      <Name>IAF.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

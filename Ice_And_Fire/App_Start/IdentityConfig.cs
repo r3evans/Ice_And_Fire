@@ -4,6 +4,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Ice_And_Fire.Models;
+using IAF.Data;
 
 namespace Ice_And_Fire
 {

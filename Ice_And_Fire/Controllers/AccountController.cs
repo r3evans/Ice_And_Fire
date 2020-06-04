@@ -16,6 +16,7 @@ using Microsoft.Owin.Security.OAuth;
 using Ice_And_Fire.Models;
 using Ice_And_Fire.Providers;
 using Ice_And_Fire.Results;
+using IAF.Data;
 
 namespace Ice_And_Fire.Controllers
 {

@@ -95,10 +95,6 @@
     <Compile Include="Region.m\RegionCreate.cs" />
     <Compile Include="Region.m\RegionEdit.cs" />
     <Compile Include="Region.m\RegionListItem.cs" />
-    <Compile Include="User.m\UserCreate.cs" />
-    <Compile Include="User.m\UserDetail.cs" />
-    <Compile Include="User.m\UserEdit.cs" />
-    <Compile Include="User.m\UserListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -112,15 +108,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IAF.Data\IAF.Data.csproj">
-
       <Project>{d9f8d4d9-01ab-485f-9c83-021614a7f214}</Project>
       <Name>IAF.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\IAF.Service\IAF.Service.csproj">
-      <Project>{5ad7e49a-0715-409f-8455-98b5dac37f48}</Project>
-      <Name>IAF.Service</Name>
-    </ProjectReference>
-
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

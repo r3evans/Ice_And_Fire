@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace IAF.Model.User.m
 {
-    class UserDetail
+    public class UserDetail
     {
+        public int UserId { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        //public int UserRole {get; set;}
+
     }
 }

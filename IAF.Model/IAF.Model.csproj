@@ -112,9 +112,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IAF.Data\IAF.Data.csproj">
-      <Project>{D9F8D4D9-01AB-485F-9C83-021614A7F214}</Project>
+
+      <Project>{d9f8d4d9-01ab-485f-9c83-021614a7f214}</Project>
       <Name>IAF.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\IAF.Service\IAF.Service.csproj">
+      <Project>{5ad7e49a-0715-409f-8455-98b5dac37f48}</Project>
+      <Name>IAF.Service</Name>
+    </ProjectReference>
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

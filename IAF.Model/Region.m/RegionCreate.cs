@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace IAF.Model.Region.m
 {
-    class RegionCreate
+    public class RegionCreate
     {
+        public string Name { get; set; }
+        public string Description { get; set; }
+      
     }
 }

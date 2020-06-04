@@ -110,5 +110,11 @@
   <ItemGroup>
     <Compile Include="Region.m\RegionDetail.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IAF.Data\IAF.Data.csproj">
+      <Project>{D9F8D4D9-01AB-485F-9C83-021614A7F214}</Project>
+      <Name>IAF.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

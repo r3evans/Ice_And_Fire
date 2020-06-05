@@ -15,7 +15,7 @@ namespace IAF.Model.Estate.m
         
        // public Status Status { get; set; }
         
-        //public decimal Price { get; set; }
+        public decimal Price { get; set; }
       
         public string Address { get; set; }
 

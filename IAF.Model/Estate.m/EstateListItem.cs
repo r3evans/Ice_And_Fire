@@ -9,7 +9,7 @@ namespace IAF.Model.Estate.m
 {
     public class EstateListItem
     {
-        public int EstateId { get; set; }
+        public Guid EstateId { get; set; }
         public string Name { get; set; }
        // public Status Status { get; set; }
         public decimal Price { get; set; }

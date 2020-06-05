@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace IAF.Model.Kingdom.m
 {
-   public class Kingdom
+   public class KingdomEdit
     {
+        public Guid KingdomId { get; set; }
         [Required]
         public string Name { get; set; }
 

@@ -8,8 +8,9 @@ namespace IAF.Model.Kingdom.m
 {
     public class KingdomListItem
     {
-        public int KingdomId { get; set; }
+        public Guid KingdomId { get; set; }
         public string Name { get; set; }
         public int RegionId { get; set; }
+        public string Description { get; set; }
     }
 }

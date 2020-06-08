@@ -47,6 +47,8 @@ namespace IAF.Data
                 .Configurations
                 .Add(new IdentityUserLoginConfiguration())
                 .Add(new IdentityUserRoleConfiguration());
+
+            
         }
     }
 

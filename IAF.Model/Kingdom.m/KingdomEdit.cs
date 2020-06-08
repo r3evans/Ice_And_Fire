@@ -9,14 +9,15 @@ namespace IAF.Model.Kingdom.m
 {
    public class KingdomEdit
     {
-        public Guid KingdomId { get; set; }
-        [Required]
+       // public Guid Id { get => string.IsNullOrEmpty(KingdomId) ? Guid.Empty : Guid.Parse(KingdomId); }
         public string Name { get; set; }
 
         [Required]
         public string Description { get; set; }
 
         [Required]
-        public int RegionId { get; set; }
+        public string RegionId { get; set; }
+
+        public int KingdomId { get; set; }
     }
 }

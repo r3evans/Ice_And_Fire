@@ -35,7 +35,7 @@ namespace Ice_And_Fire.Controllers
                 return InternalServerError();
             return Ok();
         }
-        public IHttpActionResult Get(Guid id)
+        public IHttpActionResult Get(int id)
         {
             EstateService estateService = CreateEstateService();
             var estate = estateService.GetEstateById(id);
@@ -54,7 +54,7 @@ namespace Ice_And_Fire.Controllers
             }
             return Ok();
         }
-        public IHttpActionResult DeleteEstate(Guid id)
+        public IHttpActionResult DeleteEstate(int id)
         {
             var service = CreateEstateService();
             if (!service.DeleteEstate(id))

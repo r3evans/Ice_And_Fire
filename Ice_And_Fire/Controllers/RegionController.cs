@@ -36,7 +36,7 @@ namespace Ice_And_Fire.Controllers
                     return InternalServerError();
                 return Ok();
             }
-            public IHttpActionResult Get(Guid id)
+            public IHttpActionResult Get(int id)
             {
                 RegionService regionService = CreateRegionService();
                 var region = regionService.GetRegionById(id);
@@ -55,7 +55,7 @@ namespace Ice_And_Fire.Controllers
                 }
                 return Ok();
             }
-            public IHttpActionResult DeleteRegion(Guid id)
+            public IHttpActionResult DeleteRegion(int id)
             {
                 var service = CreateRegionService();
                 if (!service.DeleteRegion(id))

@@ -8,10 +8,11 @@ namespace IAF.Model.Kingdom.m
 {
     public class KingdomDetail
     {
-        public Guid KingdomId { get; set; }
+        //public Guid Id { get => string.IsNullOrEmpty(KingdomId) ? Guid.Empty : Guid.Parse(KingdomId); }
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal AverageEstatePrice { get; set; }
         public int RegionId { get; set; }
+        public int KingdomId { get; set; }
     }
 }

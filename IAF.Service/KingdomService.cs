@@ -20,9 +20,10 @@ namespace IAF.Service
             var entity =
                 new Data.Kingdom()
                 {
-                    KingdomId= _kingdomId,
+                    OwnerId= _kingdomId,
                     Name = model.Name,
                     Description = model.Description,
+                    RegionId =model.RegionId
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -37,7 +38,7 @@ namespace IAF.Service
                 var query =
                     ctx
                         .Kingdoms
-                        .Where(e => e.KingdomId == _kingdomId)
+                        .Where(e => e.OwnerId == _kingdomId)
                         .Select(
                             e =>
                                 new KingdomListItem
@@ -45,12 +46,13 @@ namespace IAF.Service
                                     KingdomId = e.KingdomId,
                                     Name = e.Name,
                                     Description = e.Description,
+                                    RegionId = e.RegionId
                                 }
                         );
                 return query.ToArray();
             }
         }
-        public KingdomDetail GetKingdomById(Guid id)
+        public KingdomDetail GetKingdomById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -61,9 +63,10 @@ namespace IAF.Service
                 return
                     new KingdomDetail
                     {
-                        KingdomId = entity.KingdomId,
+                       KingdomId = entity.KingdomId,
                         Name = entity.Name,
                         Description = entity.Description,
+                        RegionId = entity.RegionId
                     };
             }
         }
@@ -81,7 +84,7 @@ namespace IAF.Service
                 return ctx.SaveChanges() == 1;
             }
         }
-        public bool DeleteKingdom(Guid kingdomId)
+        public bool DeleteKingdom(int kingdomId)
         {
             using (var ctx = new ApplicationDbContext())
             {

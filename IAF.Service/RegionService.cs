@@ -22,7 +22,7 @@ namespace IAF.Service
             var entity =
                 new Region()
                 {
-                    RegionId = _regionId,
+                    OwnerId = _regionId,
                     Name = model.Name,
                     Description = model.Description,
                 };
@@ -39,7 +39,7 @@ namespace IAF.Service
                 var query =
                     ctx
                     .Regions
-                    .Where(e => e.RegionId == _regionId)
+                    .Where(e => e.OwnerId == _regionId)
                     .Select(
                         e =>
                         new RegionListItem
@@ -52,7 +52,7 @@ namespace IAF.Service
                 return query.ToArray();
             }
         }
-        public RegionDetail GetRegionById(Guid id)
+        public RegionDetail GetRegionById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -63,7 +63,7 @@ namespace IAF.Service
                 return
                     new RegionDetail
                     {
-                        RegionId = entity.RegionId,
+                       // Id = entity.RegionId,
                         Name = entity.Name,
                         Description = entity.Description
                     };
@@ -76,7 +76,7 @@ namespace IAF.Service
                 var entity =
                     ctx
                     .Regions
-                    .Single(e => e.RegionId == model.Id);
+                    .Single(e => e.RegionId == model.RegionId);
 
                 entity.Name = model.Name;
                 entity.Description = model.Description;
@@ -84,7 +84,7 @@ namespace IAF.Service
                 return ctx.SaveChanges() == 1;
             }
         }
-        public bool DeleteRegion(Guid regionId)
+        public bool DeleteRegion(int regionId)
         {
             using (var ctx = new ApplicationDbContext())
             {

@@ -35,7 +35,7 @@ namespace Ice_And_Fire.Controllers
                 return InternalServerError();
             return Ok();
         }
-        public IHttpActionResult Get(Guid id)
+        public IHttpActionResult Get(int id)
         {
             KingdomService kingdomService = CreateKingdomService();
             var kingdoms = kingdomService.GetKingdoms(); return Ok(kingdoms);
@@ -53,7 +53,7 @@ namespace Ice_And_Fire.Controllers
             }
             return Ok();
         }
-        public IHttpActionResult DeleteKingdom(Guid id)
+        public IHttpActionResult DeleteKingdom(int id)
         {
             var service = CreateKingdomService();
             if (!service.DeleteKingdom(id))

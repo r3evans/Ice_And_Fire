@@ -12,8 +12,9 @@ namespace IAF.Data
     public enum Status { Active, Pending, Withdrawn, Closed, Under_Siege }
     public class Estate
     {
+        public Guid OwnerId { get; set; }
         [Key]
-        public Guid EstateId { get; set; }
+        public int EstateId { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]
@@ -23,8 +24,9 @@ namespace IAF.Data
         [Required]
         public string Address { get; set; }
 
-        //[ForeignKey("KingdomId")] //for annotation purposes
-        public Guid KingdomId { get; set; }
+        
+        public int KingdomId { get; set; }
+        public Kingdom Kingdom { get; set; }
 
         //public EstateType EstateType {get; set;}        //Stretch Goal
 

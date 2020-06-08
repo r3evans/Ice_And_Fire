@@ -20,11 +20,12 @@ namespace IAF.Service
             var entity =
                 new Estate()
                 {
-                    EstateId = _estateId,
+                    OwnerId = _estateId,
                     Name = model.Name,
                     // Status = model.Status,
                     Price = model.Price,
-                    Address = model.Address
+                    Address = model.Address,
+                    KingdomId = model.KingdomId
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -39,33 +40,35 @@ namespace IAF.Service
                 var query =
                     ctx
                     .Estates
-                    .Where(e => e.EstateId == _estateId)
+                    .Where(e => e.OwnerId == _estateId)
                    .Select(e =>
                    new EstateListItem
                    {
-                       EstateId = _estateId,
+                       EstateId = e.EstateId,
                        Name = e.Name,
                        Address = e.Address,
                        Price = e.Price,
+                       KingdomId = e.KingdomId
                    });
                 return query.ToArray();
             }
         }
-        public EstateDetail GetEstateById(Guid id)
+        public EstateDetail GetEstateById(int estateId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                     .Estates
-                    .Single(e => e.EstateId == _estateId);
+                    .Single(e => e.OwnerId == _estateId);
                 return
                     new EstateDetail
                     {
-                        EstateId = entity.EstateId,
+                       // EstateId = entity.EstateId,
                         Name = entity.Name,
                         Address = entity.Address,
                         Price = entity.Price,
+                        KingdomId = entity.KingdomId
                     };
             }
         }
@@ -83,7 +86,7 @@ namespace IAF.Service
                 return ctx.SaveChanges() == 1;
             }
         }
-        public bool DeleteEstate(Guid estateId)
+        public bool DeleteEstate(int estateId)
         {
             using (var ctx = new ApplicationDbContext())
             {

@@ -11,9 +11,9 @@ namespace IAF.Service
     public class KingdomService
     {
         private readonly Guid _kingdomId;
-        public KingdomService(Guid KingdomId)
+        public KingdomService(Guid kingdomId)
         {
-            _kingdomId = KingdomId;
+            _kingdomId = kingdomId;
         }
         public bool CreateKingdom(KingdomCreate model)
         {

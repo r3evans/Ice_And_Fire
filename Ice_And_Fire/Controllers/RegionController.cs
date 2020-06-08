@@ -11,92 +11,57 @@ using System.Web.Http;
 
 namespace Ice_And_Fire.Controllers
 {
-    public class RegionService
-    {
-        private readonly Guid _regionId;
-        public RegionService(Guid RegionId)
+        public class RegionController : ApiController
         {
-            _regionId = RegionId;
-        }
-        public bool CreateRegion(RegionCreate model)
-        {
-            var entity =
-                new Region()
+            private RegionService CreateRegionService()
+            {
+                var userId = Guid.Parse(User.Identity.GetUserId());
+                var regionService = new RegionService(userId);
+                return regionService;
+            }
+            public IHttpActionResult Get()
+            {
+                RegionService regionService = CreateRegionService();
+                var regions = regionService.GetRegions();
+                return Ok(regions);
+            }
+            public IHttpActionResult Post(RegionCreate region)
+            {
+                if (!ModelState.IsValid)
                 {
-                    RegionId = _regionId,
-                    Name = model.Name,
-                    Description = model.Description,
-                };
-            using (var ctx = new ApplicationDbContext())
-            {
-                ctx.Regions.Add(entity);
-                return ctx.SaveChanges() == 1;
+                    return BadRequest(ModelState);
+                }
+                var service = CreateRegionService();
+                if (!service.CreateRegion(region))
+                    return InternalServerError();
+                return Ok();
             }
-        }
-        public IEnumerable<RegionListItem> GetRegions()
-        {
-            using (var ctx = new ApplicationDbContext())
+            public IHttpActionResult Get(Guid id)
             {
-                var query =
-                    ctx
-                        .Regions
-                        .Where(e => e.RegionId == _regionId)
-                        .Select(
-                            e =>
-                                new RegionListItem
-                                {
-                                    RegionId = e.RegionId,
-                                    Name = e.Name,
-                                    Description = e.Description,
-                                }
-                        );
-                return query.ToArray();
+                RegionService regionService = CreateRegionService();
+                var region = regionService.GetRegionById(id);
+                return Ok(region);
             }
-        }
-        public RegionDetail GetRegionById(Guid id)
-        {
-            using (var ctx = new ApplicationDbContext())
+            public IHttpActionResult Put(RegionEdit region)  //update region
             {
-                var entity =
-                    ctx
-                        .Regions
-                        .Single(e => e.RegionId == id);
-                return
-                    new RegionDetail
-                    {
-                        RegionId = entity.RegionId,
-                        Name = entity.Name,
-                        Description = entity.Description,
-                    };
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+                var service = CreateRegionService();
+                if (!service.UpdateRegion(region))
+                {
+                    return InternalServerError();
+                }
+                return Ok();
             }
-        }
-        public bool UpdateRegion(RegionEdit model)
-        {
-            using (var ctx = new ApplicationDbContext())
+            public IHttpActionResult DeleteRegion(Guid id)
             {
-                var entity =
-                    ctx
-                        .Regions
-                        .Single(e => e.RegionId == model.RegionId);
-                entity.Name = model.Name;
-                entity.Description = model.Description;
-
-                return ctx.SaveChanges() == 1;
-            }
-        }
-        public bool DeleteRegion(Guid regionId)
-        {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var entity =
-                    ctx
-                    .Regions
-                    .Single(e => e.RegionId == regionId);
-
-                ctx.Regions.Remove(entity);
-                return ctx.SaveChanges() == 1;
+                var service = CreateRegionService();
+                if (!service.DeleteRegion(id))
+                    return InternalServerError();
+                return Ok();
             }
         }
     }
-}
 

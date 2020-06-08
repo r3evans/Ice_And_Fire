@@ -36,7 +36,6 @@ namespace IAF.Data
 
         public DbSet<Estate> Estates { get; set; }
         public DbSet<Kingdom> Kingdoms { get; set; }
-  
         public DbSet<Region> Regions { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

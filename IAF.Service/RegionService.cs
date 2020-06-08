@@ -76,7 +76,7 @@ namespace IAF.Service
                 var entity =
                     ctx
                     .Regions
-                    .Single(e => e.RegionId == model.RegionId);
+                    .Single(e => e.RegionId == model.Id);
 
                 entity.Name = model.Name;
                 entity.Description = model.Description;

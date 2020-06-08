@@ -23,8 +23,8 @@ namespace IAF.Data
         [Required]
         public string Address { get; set; }
 
-        [ForeignKey("KingdomId")] //for annotation purposes
-        public int KingdomId { get; set; }
+        //[ForeignKey("KingdomId")] //for annotation purposes
+        public Guid KingdomId { get; set; }
 
         //public EstateType EstateType {get; set;}        //Stretch Goal
 

@@ -16,7 +16,7 @@ namespace IAF.Data
         public string Description { get; set; }
         public decimal AverageEstatePrice { get; set; }
 
-        [ForeignKey("RegionId")] //for annotation purposes
+        //[ForeignKey("RegionId")] //for annotation purposes
         public Guid RegionId { get; set; }
         public virtual List<Estate> Estates { get; set; }
     }

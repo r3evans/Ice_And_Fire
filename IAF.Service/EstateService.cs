@@ -25,7 +25,9 @@ namespace IAF.Service
                     // Status = model.Status,
                     Price = model.Price,
                     Address = model.Address,
-                    KingdomId = model.KingdomId
+                    KingdomId = model.KingdomId,
+                    Status = model.Status,
+                    EstateType = model.EstateType
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -48,7 +50,9 @@ namespace IAF.Service
                        Name = e.Name,
                        Address = e.Address,
                        Price = e.Price,
-                       KingdomId = e.KingdomId
+                       Status = e.Status,
+                       EstateType = e.EstateType,
+                       KingdomName = e.Kingdom.Name
                    });
                 return query.ToArray();
             }
@@ -64,11 +68,13 @@ namespace IAF.Service
                 return
                     new EstateDetail
                     {
-                       // EstateId = entity.EstateId,
+                       EstateId = entity.EstateId,
                         Name = entity.Name,
                         Address = entity.Address,
                         Price = entity.Price,
-                        KingdomId = entity.KingdomId
+                        Status = entity.Status,
+                        EstateType = entity.EstateType,
+                        KingdomName = entity.Kingdom.Name
                     };
             }
         }
@@ -83,6 +89,8 @@ namespace IAF.Service
                 entity.Name = model.Name;
                 entity.Address = model.Address;
                 entity.Price = model.Price;
+                entity.Status = model.Status;
+                entity.EstateType = model.EstateType;
                 return ctx.SaveChanges() == 1;
             }
         }

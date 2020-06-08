@@ -12,7 +12,7 @@ namespace IAF.Model.Kingdom.m
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal AverageEstatePrice { get; set; }
-        public int RegionId { get; set; }
+        public string RegionName { get; set; }
         public int KingdomId { get; set; }
     }
 }

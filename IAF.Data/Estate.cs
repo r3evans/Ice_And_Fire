@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace IAF.Data
 {
-    // public enum EstateType { Shack, }    //Stretch Goal
+    public enum EstateType { Castle, Manor, Cottage, Hut }    //Stretch Goal
     public enum Status { Active, Pending, Withdrawn, Closed, Under_Siege }
     public class Estate
     {
@@ -23,6 +23,9 @@ namespace IAF.Data
         public decimal Price { get; set; }
         [Required]
         public string Address { get; set; }
+
+        public EstateType EstateType { get; set; }
+       
 
         
         public int KingdomId { get; set; }

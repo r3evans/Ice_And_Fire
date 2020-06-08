@@ -46,7 +46,7 @@ namespace IAF.Service
                                     KingdomId = e.KingdomId,
                                     Name = e.Name,
                                     Description = e.Description,
-                                    RegionId = e.RegionId
+                                    RegionName = e.Region.Name
                                 }
                         );
                 return query.ToArray();
@@ -66,7 +66,7 @@ namespace IAF.Service
                        KingdomId = entity.KingdomId,
                         Name = entity.Name,
                         Description = entity.Description,
-                        RegionId = entity.RegionId
+                        RegionName = entity.Region.Name
                     };
             }
         }

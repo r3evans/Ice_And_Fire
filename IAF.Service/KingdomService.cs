@@ -20,10 +20,10 @@ namespace IAF.Service
             var entity =
                 new Data.Kingdom()
                 {
-                    OwnerId= _kingdomId,
+                    OwnerId = _kingdomId,
                     Name = model.Name,
                     Description = model.Description,
-                    RegionId =model.RegionId
+                    RegionId = model.RegionId
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -35,6 +35,7 @@ namespace IAF.Service
         {
             using (var ctx = new ApplicationDbContext())
             {
+
                 var query =
                     ctx
                         .Kingdoms
@@ -56,17 +57,28 @@ namespace IAF.Service
         {
             using (var ctx = new ApplicationDbContext())
             {
+                var avgPrice =
+                     ctx
+                     .Estates
+                     .GroupBy(k => k.KingdomId)
+                     .Select(g => new {
+                         Kingdom = g.Key,
+                         Average = g.Average(k => k.Price)
+                     })
+                     .First(e => e.Kingdom == id);
+
                 var entity =
                     ctx
-                        .Kingdoms
+                        .Kingdoms.Include("Region")
                         .Single(e => e.KingdomId == id);
                 return
                     new KingdomDetail
                     {
-                       KingdomId = entity.KingdomId,
+                        KingdomId = entity.KingdomId,
                         Name = entity.Name,
                         Description = entity.Description,
-                        RegionName = entity.Region.Name
+                        RegionName = entity.Region?.Name,
+                        AverageEstatePrice = avgPrice.Average
                     };
             }
         }
@@ -80,7 +92,7 @@ namespace IAF.Service
                         .Single(e => e.KingdomId == model.KingdomId);
                 entity.Name = model.Name;
                 entity.Description = model.Description;
-                
+
                 return ctx.SaveChanges() == 1;
             }
         }

@@ -33,7 +33,7 @@ namespace IAF.Data
         {
             return new ApplicationDbContext();
         }
-
+        public DbSet<UserEstate> UserEstates { get; set; }
         public DbSet<Estate> Estates { get; set; }
         public DbSet<Kingdom> Kingdoms { get; set; }
         public DbSet<Region> Regions { get; set; }

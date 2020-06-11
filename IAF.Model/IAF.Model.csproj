@@ -95,6 +95,10 @@
     <Compile Include="Region.m\RegionCreate.cs" />
     <Compile Include="Region.m\RegionEdit.cs" />
     <Compile Include="Region.m\RegionListItem.cs" />
+    <Compile Include="UserEstate.m\UserEstateCreate.cs" />
+    <Compile Include="UserEstate.m\UserEstateDetail.cs" />
+    <Compile Include="UserEstate.m\UserEstateEdit.cs" />
+    <Compile Include="UserEstate.m\UserEstateListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -17,9 +17,7 @@ namespace IAF.Data
         public int KingdomId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public decimal AverageEstatePrice { get; set; }
-
-
+        
         public int RegionId { get; set; }
         public Region Region { get; set; }
        

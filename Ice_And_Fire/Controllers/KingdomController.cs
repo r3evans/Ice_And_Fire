@@ -38,7 +38,7 @@ namespace Ice_And_Fire.Controllers
         public IHttpActionResult Get(int id)
         {
             KingdomService kingdomService = CreateKingdomService();
-            var kingdoms = kingdomService.GetKingdoms(); return Ok(kingdoms);
+            var kingdoms = kingdomService.GetKingdomById(id); return Ok(kingdoms);
         }
         public IHttpActionResult Put(KingdomEdit kingdom)  //update kingdom
         {

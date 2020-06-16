@@ -24,11 +24,11 @@ To install the application without contributing:
    * Right click the Solution and select Restore NuGet Packages 
     
 To contribute to the project:
-    * Fork the project (<https://github.com/r3evans/Ice_And_Fire/fork>)
-    * Create your feature branch (`git checkout -b feature`)
-    * Commit your changes (`git commit -am '<message here>`)
-    * Push to the branch (`git push origin feature`)
-    * Create a new Pull Request
+* Fork the project (<https://github.com/r3evans/Ice_And_Fire/fork>)
+* Create your feature branch (`git checkout -b feature`)
+* Commit your changes (`git commit -am '<message here>`)
+* Push to the branch (`git push origin feature`)
+* Create a new Pull Request
 
 ### Usage:
 

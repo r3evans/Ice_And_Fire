@@ -15,13 +15,13 @@ Postman
 ### Installation: 
 
 To install the application without contributing:
-    * Click the Clone or Download button on the repository
-    * Select Download Zip
-    * Unzip the file into a location of your choice
-    * Open the Ice_And_Fire.sln with Visual Studio 2019
-    * In the Solution Explorer, right click the Solution and select Build
-    * Additionally, you may need to install/restore NuGet Packages
-          * Right click the Solution and select Restore NuGet Packages 
+* Click the Clone or Download button on the repository
+* Select Download Zip
+* Unzip the file into a location of your choice
+* Open the Ice_And_Fire.sln with Visual Studio 2019
+* In the Solution Explorer, right click the Solution and select Build
+* Additionally, you may need to install/restore NuGet Packages
+   * Right click the Solution and select Restore NuGet Packages 
     
 To contribute to the project:
     * Fork the project (<https://github.com/r3evans/Ice_And_Fire/fork>)
@@ -33,11 +33,11 @@ To contribute to the project:
 ### Usage:
 
 To Run the application:
-    * Hit the play button at the top of the page (or Ctrl + F5)
-    * Select API in the navigation bar in the window that pops up
-    * This shows all available functions that can be tested using Postman
-    * Selecting an API will provide the necessary parameters and format
-    * At this time (6/16/2020), the IAF Realty App does not contain a UI.
+* Hit the play button at the top of the page (or Ctrl + F5)
+* Select API in the navigation bar in the window that pops up
+* This shows all available functions that can be tested using Postman
+* Selecting an API will provide the necessary parameters and format
+* At this time (6/16/2020), the IAF Realty App does not contain a UI.
 
 ### Credits: 
 

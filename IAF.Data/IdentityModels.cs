@@ -33,11 +33,10 @@ namespace IAF.Data
         {
             return new ApplicationDbContext();
         }
-
-       // public DbSet<Estate> Estates { get; set; }
-       // public DbSet<Kingdom> Kingdoms { get; set; }
-  
-      //  public DbSet<Region> Regions { get; set; }
+        public DbSet<UserEstate> UserEstates { get; set; }
+        public DbSet<Estate> Estates { get; set; }
+        public DbSet<Kingdom> Kingdoms { get; set; }
+        public DbSet<Region> Regions { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
@@ -48,6 +47,8 @@ namespace IAF.Data
                 .Configurations
                 .Add(new IdentityUserLoginConfiguration())
                 .Add(new IdentityUserRoleConfiguration());
+
+            
         }
     }
 

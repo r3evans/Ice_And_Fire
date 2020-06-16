@@ -88,6 +88,7 @@
     <Compile Include="KingdomService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegionService.cs" />
+    <Compile Include="UserEstateService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

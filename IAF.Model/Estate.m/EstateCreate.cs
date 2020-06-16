@@ -10,14 +10,19 @@ namespace IAF.Model.Estate.m
 {
     public class EstateCreate
     {
-        
+        [Required]
         public string Name { get; set; }
         
-       // public Status Status { get; set; }
+        public Status Status { get; set; }
         
-        //public decimal Price { get; set; }
-      
+        public decimal Price { get; set; }
+        
         public string Address { get; set; }
+
+        public EstateType EstateType { get; set; }
+
+        [Required]
+        public int KingdomId { get; set; }
 
     }
 }

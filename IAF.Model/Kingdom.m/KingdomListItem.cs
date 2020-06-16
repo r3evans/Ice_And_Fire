@@ -10,6 +10,7 @@ namespace IAF.Model.Kingdom.m
     {
         public int KingdomId { get; set; }
         public string Name { get; set; }
-        public int RegionId { get; set; }
+        public string RegionName { get; set; }
+        public string Description { get; set; }
     }
 }

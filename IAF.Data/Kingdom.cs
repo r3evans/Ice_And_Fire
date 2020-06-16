@@ -2,22 +2,25 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//namespace IAF.Data
-//{
-//   public class Kingdom
-//    {
-//        [Key]
-//        public int KingdomId { get; set; }
-//        public string Name { get; set; }
-//        public string Description { get; set; }
-//        public decimal AverageEstatePrice { get; set; }
+namespace IAF.Data
+{
+    public class Kingdom
+    {
+        public Guid OwnerId { get; set; }
 
-//        [ForeignKey("RegionId")] //for annotation purposes
-//        public int RegionId { get; set; }
-//        public virtual List<Estate>Estates { get; set; }
-//    }
-//}
+        [Key]
+        public int KingdomId { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        
+        public int RegionId { get; set; }
+        public Region Region { get; set; }
+       
+        public ICollection<Estate> Estates { get; set; }
+    }
+}

@@ -39,8 +39,8 @@ To Run the application:
     * Selecting an API will provide the necessary parameters and format
     * At this time (6/16/2020), the IAF Realty App does not contain a UI.
 
-## Credits: 
+### Credits: 
 
-        Robert Evans- [R3evans](https://github.com/r3evans)
-        Kirstin Oaldon - [Koaldon](https://github.com/koaldon)
-        Terry Brown - [Jhondoe256](https://github.com/jhondoe256)
+Robert Evans- [R3evans](https://github.com/r3evans)
+Kirstin Oaldon - [Koaldon](https://github.com/koaldon)
+Terry Brown - [Jhondoe256](https://github.com/jhondoe256)

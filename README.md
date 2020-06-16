@@ -3,7 +3,7 @@
 Description: The Ice and Fire Realty App was created as a group collaboration for a Software Development course. This project functions as a themed administrative application for realtors. It allows an admin to create Regions, Kingdoms, and Estate listings to aid in selling homes. The application borrows aspects of the A Song of Ice and Fire world (Game of Thrones) as inspiration.
 
 
-###Prerequisites
+### Prerequisites
 Install the following software:
 ```
 Visual Studio 2019
@@ -12,7 +12,7 @@ Visual Studio 2019
 Postman
 ```
 
-###Installation: 
+### Installation: 
 
 To install the application without contributing:
     * Click the Clone or Download button on the repository
@@ -30,7 +30,7 @@ To contribute to the project:
     * Push to the branch (`git push origin feature`)
     * Create a new Pull Request
 
-###Usage:
+### Usage:
 
 To Run the application:
     * Hit the play button at the top of the page (or Ctrl + F5)

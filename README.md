@@ -5,4 +5,4 @@ Installation:
 Usage:
 Credits: Robert Evans (https://github.com/r3evans)
          Kirstin Oaldon (https://github.com/koaldon)
-         Terry Brown (https://github.com/)
+         Terry Brown (https://github.com/jhondoe256)

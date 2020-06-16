@@ -22,7 +22,7 @@ namespace IAF.Model.Estate.m
         public EstateType EstateType { get; set; }
 
         [Required]
-        public int KingdomId { get; set; }
+        public int CityId { get; set; }
 
     }
 }

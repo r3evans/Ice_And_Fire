@@ -28,8 +28,8 @@ namespace IAF.Data
        
 
         
-        public int KingdomId { get; set; }
-        public Kingdom Kingdom { get; set; }
+        public int CityId { get; set; }
+        public City City { get; set; }
 
         //public EstateType EstateType {get; set;}        //Stretch Goal
 

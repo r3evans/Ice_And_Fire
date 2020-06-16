@@ -16,6 +16,6 @@ namespace IAF.Model.Estate.m
         public decimal Price { get; set; }
         public string Address { get; set; }
         public EstateType EstateType { get; set; }
-        public string KingdomName { get; set; }
+        public string CityName { get; set; }
     }
 }

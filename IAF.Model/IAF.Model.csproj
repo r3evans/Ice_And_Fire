@@ -88,9 +88,9 @@
     <Compile Include="Estate.m\EstateDetail.cs" />
     <Compile Include="Estate.m\EstateEdit.cs" />
     <Compile Include="Estate.m\EstateListItem.cs" />
-    <Compile Include="Kingdom.m\KingdomCreate.cs" />
-    <Compile Include="Kingdom.m\KingdomDetail.cs" />
-    <Compile Include="Kingdom.m\KingdomListItem.cs" />
+    <Compile Include="City.m\CityCreate.cs" />
+    <Compile Include="City.m\CityDetail.cs" />
+    <Compile Include="City.m\CityListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Region.m\RegionCreate.cs" />
     <Compile Include="Region.m\RegionEdit.cs" />
@@ -99,13 +99,17 @@
     <Compile Include="UserEstate.m\UserEstateDetail.cs" />
     <Compile Include="UserEstate.m\UserEstateEdit.cs" />
     <Compile Include="UserEstate.m\UserEstateListItem.cs" />
+    <Compile Include="User\UserCreate.cs" />
+    <Compile Include="User\UserDetail.cs" />
+    <Compile Include="User\UserEdit.cs" />
+    <Compile Include="User\UserListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Kingdom.m\KingdomEdit.cs" />
+    <Compile Include="City.m\CityEdit.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Region.m\RegionDetail.cs" />

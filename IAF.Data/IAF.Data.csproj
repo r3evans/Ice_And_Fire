@@ -85,39 +85,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Estate.cs" />
-    <Compile Include="Kingdom.cs" />
-    <Compile Include="Migrations\202006111457024_InitialCreate.cs" />
-    <Compile Include="Migrations\202006111457024_InitialCreate.Designer.cs">
-      <DependentUpon>202006111457024_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006111751234_Added Avg.Price and UserEstate.cs" />
-    <Compile Include="Migrations\202006111751234_Added Avg.Price and UserEstate.Designer.cs">
-      <DependentUpon>202006111751234_Added Avg.Price and UserEstate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006111814345_AverageEstatePrice.cs" />
-    <Compile Include="Migrations\202006111814345_AverageEstatePrice.Designer.cs">
-      <DependentUpon>202006111814345_AverageEstatePrice.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="City.cs" />
     <Compile Include="Region.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Role.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="UserEstate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202006111457024_InitialCreate.resx">
-      <DependentUpon>202006111457024_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006111751234_Added Avg.Price and UserEstate.resx">
-      <DependentUpon>202006111751234_Added Avg.Price and UserEstate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006111814345_AverageEstatePrice.resx">
-      <DependentUpon>202006111814345_AverageEstatePrice.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

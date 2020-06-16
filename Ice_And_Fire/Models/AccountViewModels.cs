@@ -27,6 +27,7 @@ namespace Ice_And_Fire.Models
 
     public class UserInfoViewModel
     {
+        public string UserId { get; set; }
         public string Email { get; set; }
 
         public bool HasRegistered { get; set; }

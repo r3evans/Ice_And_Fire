@@ -22,6 +22,6 @@ namespace IAF.Model.Estate.m
         public int EstateId { get; set; }
 
         
-        public string KingdomName { get; set; }
+        public string CityName { get; set; }
     }
 }

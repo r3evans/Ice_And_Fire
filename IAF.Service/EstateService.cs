@@ -22,10 +22,9 @@ namespace IAF.Service
                 {
                     OwnerId = _estateId,
                     Name = model.Name,
-                    // Status = model.Status,
                     Price = model.Price,
                     Address = model.Address,
-                    KingdomId = model.KingdomId,
+                    CityId = model.CityId,
                     Status = model.Status,
                     EstateType = model.EstateType
                 };
@@ -52,7 +51,7 @@ namespace IAF.Service
                        Price = e.Price,
                        Status = e.Status,
                        EstateType = e.EstateType,
-                       KingdomName = e.Kingdom.Name
+                       CityName = e.City.Name
                    });
                 return query.ToArray();
             }
@@ -74,7 +73,7 @@ namespace IAF.Service
                         Price = entity.Price,
                         Status = entity.Status,
                         EstateType = entity.EstateType,
-                        KingdomName = entity.Kingdom.Name
+                        CityName = entity.City.Name
                     };
             }
         }

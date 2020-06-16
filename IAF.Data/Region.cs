@@ -18,8 +18,8 @@ namespace IAF.Data
         public string Name { get; set; }
         [Required]
         public string Description { get; set; }
-        public ICollection<Kingdom> Kingdoms { get; set; }
+        public ICollection<City> Cities { get; set; }
 
-       // public int KingdomId { get; set; }
+      
     }
 }

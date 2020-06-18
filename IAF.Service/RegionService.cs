@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net.Configuration;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Http;
 
 namespace IAF.Service
 {
@@ -17,6 +18,7 @@ namespace IAF.Service
         {
             _regionId = regionId;
         }
+       // [Authorize(Roles = "Admin")]
         public bool CreateRegion(RegionCreate model)
         {
             var entity =
@@ -69,6 +71,7 @@ namespace IAF.Service
                     };
             }
         }
+      //  [Authorize(Roles = "Admin")]
         public bool UpdateRegion(RegionEdit model)
         {
             using(var ctx = new ApplicationDbContext())
@@ -84,6 +87,7 @@ namespace IAF.Service
                 return ctx.SaveChanges() == 1;
             }
         }
+       // [Authorize(Roles = "Admin")]
         public bool DeleteRegion(int regionId)
         {
             using (var ctx = new ApplicationDbContext())

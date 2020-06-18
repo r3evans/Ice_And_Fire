@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Http;
 
 namespace IAF.Service
 {
@@ -15,6 +16,7 @@ namespace IAF.Service
         {
             _estateId = estateId;
         }
+       // [Authorize(Roles = "Admin")]
         public bool CreateEstate(EstateCreate model)
         {
             var entity =
@@ -77,6 +79,7 @@ namespace IAF.Service
                     };
             }
         }
+       // [Authorize(Roles = "Admin")]
         public bool UpdateEstate(EstateEdit model)
         {
             using (var ctx = new ApplicationDbContext())
@@ -93,6 +96,7 @@ namespace IAF.Service
                 return ctx.SaveChanges() == 1;
             }
         }
+      //  [Authorize(Roles = "Admin")]
         public bool DeleteEstate(int estateId)
         {
             using (var ctx = new ApplicationDbContext())

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using IAF.Data;
 using IAF.Model.Region.m;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace IAF.Model.City.m
 {

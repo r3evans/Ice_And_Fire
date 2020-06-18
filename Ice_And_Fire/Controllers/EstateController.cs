@@ -10,6 +10,7 @@ using System.Web.Http;
 
 namespace Ice_And_Fire.Controllers
 {
+    
     public class EstateController : ApiController
     {
         private EstateService CreateEstateService()
